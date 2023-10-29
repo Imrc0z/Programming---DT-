@@ -1,25 +1,25 @@
-# Gegeven lijst
-steden = ["Amsterdam", "Praag", "Lissabon", "Londen", "Parijs", "Milaan"]
+#Rida Najibi
 
-# 1. Druk achtereenvolgens af: het eerste, derde en laatste element.
-print(steden[0])      # Eerste element
-print(steden[2])      # Derde element
-print(steden[-1])     # Laatste element
+#Dit is een functie die als input je geboortejaar neemt en je leeftijd in Venus jaren retourneert. door middel van 3 getallen
 
-# 2. Bepaal het aantal elementen in de lijst met steden.
-aantal_elementen = len(steden)
-print(aantal_elementen)  # Dit zal 6 afdrukken
+def maximum_van_drie_getallen(a, b, c):
+    return max(a, b, c)
 
-# 3. Bepaal het aantal letters in de tweede string ("Praag").
-aantal_letters_in_praag = len(steden[1])
-print(aantal_letters_in_praag)  # Dit zal 5 afdrukken
+def venus_jaar(geboortejaar):
+    huidig_jaar = 2023  # Stel het huidige jaar in
+    aards_leeftijd = huidig_jaar - geboortejaar
+    venus_leeftijd = aards_leeftijd / 0.615
+    return venus_leeftijd
 
-# 4. Voeg items toe aan de lijst met behulp van de += operator.
-steden += ["Brussel", "Warschau"]
-print(steden)  # Dit zal de uitgebreide lijst afdrukken
+# Test de maximum_van_drie_getallen functie met verschillende argumenten
+getal1 = 5
+getal2 = 10
+getal3 = 3
 
-# 5. Pas het eerste element aan van "Amsterdam" naar "Rotterdam".
-steden[0] = "Rotterdam"
+max_resultaat = maximum_van_drie_getallen(getal1, getal2, getal3)
+print(f"Het maximum van {getal1}, {getal2} en {getal3} is: {max_resultaat}")
 
-# 6. Controleer het resultaat door de lijst met steden opnieuw af te drukken.
-print(steden)  # Dit zal de bijgewerkte lijst met "Rotterdam" afdrukken
+# Test de venus_jaar functie met je eigen geboortejaar
+geboortejaar = 1990  # Vervang dit door je eigen geboortejaar
+venus_leeftijd = venus_jaar(geboortejaar)
+print(f"Je leeftijd in Venus-jaren is ongeveer {venus_leeftijd:.2f} jaar.")
